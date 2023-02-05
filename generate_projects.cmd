@@ -1,3 +1,3 @@
 cd Build
-cmake ../ -G "Visual Studio 15 Win64"
+cmake ../ -G "Visual Studio 17 2022"
 cd ..

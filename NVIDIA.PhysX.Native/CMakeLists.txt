@@ -13,6 +13,7 @@ add_definitions(-DPX_PHYSX_STATIC_LIB)
 
 cmake_policy(SET CMP0086 NEW)
 cmake_policy(SET CMP0078 NEW)
+cmake_policy(SET CMP0122 OLD)
 
 find_package(SWIG REQUIRED)
 include(UseSWIG)
@@ -37,7 +38,7 @@ include_directories("${CMAKE_CURRENT_LIST_DIR}"
                     "$ENV{PHYSX_DIR}/physx/include"
                     "$ENV{PHYSX_DIR}/pxshared/include")
 
-link_directories("$ENV{PHYSX_DIR}/physx/bin/win.x86_64.vc141.mt/$(Configuration)")
+link_directories("$ENV{PHYSX_DIR}/physx/bin/win.x86_64.vc142.mt/$(Configuration)")
 
 set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -namespace NVIDIA.PhysX -nodefaultctor)
 set(CMAKE_SWIG_OUTDIR "${CMAKE_CURRENT_LIST_DIR}/../NVIDIA.PhysX/Wrapper")
